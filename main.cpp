@@ -175,6 +175,7 @@ void sort_lines_in_big_file(char* input_file, char* output_file, int mem_limit) 
     }
     num_file = 0;
     std::cout << "Done!\n";
+    std::cout << "Output file: "<< output_file << "\n";
 }
 
 
@@ -196,7 +197,6 @@ int main(int argc, char *argv[]) {
 
     sort_lines_in_big_file(input_file, output_file, MEMORY_SIZE);
 
-    std::cout << "Output file: "<< output_file << "\n";
     std::cerr << "\nTime elapsed: " << 1000 * clock() / CLOCKS_PER_SEC << "ms\n";
     return 0;
 }
